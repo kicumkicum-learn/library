@@ -3,7 +3,16 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": "kicumkicum@gmail.com",
+  "dependencies": {
+    "angular": "~1.6.0",
+    "angular-loader": "~1.6.0",
+    "angular-mocks": "~1.6.0",
+    "angular-route": "~1.6.0",
+    "express": "latest",
+    "http-server": "^0.9.0",
+    "pg": "^6.1.2"
+  },
   "scripts": {
-
+    "start.api": "node lib/index.js"
   }
 }
