@@ -11,7 +11,8 @@
     "express": "latest",
     "http-server": "^0.9.0",
     "node-bin": "^7.0.0",
-    "pg": "^6.1.2"
+    "pg": "^6.1.2",
+    "readline": "^1.3.0"
   },
   "scripts": {
     "start.api": "node lib/index.js",
