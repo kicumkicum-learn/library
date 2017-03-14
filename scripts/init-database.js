@@ -12,16 +12,16 @@ rl.question('Tables will be dropped. You are sure? (y/N): ', function(ask) {
 			.then(() => database.query('DROP TABLE authors'))
 			.catch((err) => console.warn(String(err)))
 
-			.then(() => database.query('CREATE TABLE authors (id SERIAL, name TEXT);'))
-			.then(() => database.query('INSERT INTO authors (name) VALUES ("Mark Twain");'))
+			.then(() => database.query(`CREATE TABLE authors (id SERIAL, name TEXT, last_name TEXT);`))
+			.then(() => database.query(`INSERT INTO authors (name, last_name) VALUES ('Mark', 'Twain');`))
 
-			.then(() => database.query('CREATE TABLE books (id SERIAL, title TEXT, authors TEXT[]);'))
-			.then(() => database.query('INSERT INTO books (title, authors) VALUES ("Tom Sawyer", ARRAY["Mark Twain"]);'))
-			.then(() => database.query('INSERT INTO books (title, authors) VALUES ("Geklberi Finn", ARRAY["Mark Twain"]);'))
+			.then(() => database.query(`CREATE TABLE books (id SERIAL, title TEXT, authors INTEGER[]);`))
+			.then(() => database.query(`INSERT INTO books (title, authors) VALUES ('Tom Sawyer', ARRAY[1]);`))
+			.then(() => database.query(`INSERT INTO books (title, authors) VALUES ('Geklberi Finn', ARRAY[1]);`))
 
 			.then(() => process.exit(0))
 			.catch((err) => {
-				console.error(err);
+				console.error(String(err));
 				process.exit(1);
 			});
 	} else {
