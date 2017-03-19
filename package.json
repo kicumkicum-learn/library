@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start.api": "node lib/index.js",
+    "start.ui": "node ./scripts/start-ui.js",
     "init.db": "node scripts/init-database.js"
   }
 }
