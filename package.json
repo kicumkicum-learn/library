@@ -10,6 +10,7 @@
     "angular-route": "~1.6.0",
     "express": "latest",
     "http-server": "^0.9.0",
+    "import-export": "latest",
     "node-bin": "^7.0.0",
     "pg": "^6.1.2",
     "readline": "^1.3.0"
